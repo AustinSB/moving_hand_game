@@ -1,10 +1,21 @@
 extends CharacterBody2D
 
-var offset = Vector2(25, 40)
-var follow_speed = 15.0
+var speed = 400
 
 func _process(delta: float) -> void:
-	var mouse_position = get_global_mouse_position()
-	var target_position = mouse_position + offset
+	velocity = Vector2.ZERO
 	
-	position = position.lerp(target_position, follow_speed * delta)
+	if Input.is_key_pressed(KEY_D):
+		velocity.x += 1
+	if Input.is_key_pressed(KEY_A):
+		velocity.x -= 1
+	if Input.is_key_pressed(KEY_W):
+		velocity.y -= 1
+	if Input.is_key_pressed(KEY_S):
+		velocity.y += 1
+		
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed
+		rotation = velocity.angle()
+	
+	move_and_slide()
