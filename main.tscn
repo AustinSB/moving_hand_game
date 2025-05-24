@@ -1,14 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://i0dvfun7gy7v"]
 
 [ext_resource type="Script" uid="uid://8266vvxdgh65" path="res://main.gd" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://b6hwlglpw50m2" path="res://clickable_box.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://xcicak13xa8l" path="res://box.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://o268dgapyma8" path="res://Player Hand/player.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ig7tw")
 
-[node name="Clickable Box" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(648, 141)
-
 [node name="Player" parent="." instance=ExtResource("3_h2yge")]
-position = Vector2(45, 63)
+
+[node name="Box" parent="." instance=ExtResource("3_1bvp3")]
+position = Vector2(679, 113)
