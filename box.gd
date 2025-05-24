@@ -1,1 +1,4 @@
-extends StaticBody2D
+extends Area2D
+
+func _on_body_entered(_body: Node2D) -> void:
+	print("body entered")

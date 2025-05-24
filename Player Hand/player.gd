@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var speed = 400
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	velocity = Vector2.ZERO
 	
 	if Input.is_key_pressed(KEY_D):
