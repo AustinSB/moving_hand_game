@@ -3,16 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://c3607t7skmckm" path="res://Player Hand/hand_idle_icon.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://cbcs4d4lffyhr" path="res://Player Hand/player.gd" id="1_ckjtj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(60, 94)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3rib"]
+size = Vector2(61, 93)
 
-[node name="Player" type="Node2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_ckjtj")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v3rib")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_onrkg")
-
-[node name="Hand" type="Sprite2D" parent="StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_4flbx")
