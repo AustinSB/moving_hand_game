@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://o268dgapyma8"]
 
-[ext_resource type="Texture2D" uid="uid://c3607t7skmckm" path="res://Player Hand/hand_idle_icon.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://cbcs4d4lffyhr" path="res://Player Hand/player.gd" id="1_ckjtj"]
+[ext_resource type="Texture2D" uid="uid://3uyvrj0jr2yq" path="res://Player Hand/hand_move_icon.png" id="2_ckjtj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3rib"]
-size = Vector2(61, 93)
+size = Vector2(73, 95)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ckjtj")
@@ -15,4 +15,4 @@ shape = SubResource("RectangleShape2D_v3rib")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
-texture = ExtResource("1_4flbx")
+texture = ExtResource("2_ckjtj")
