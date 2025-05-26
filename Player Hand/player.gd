@@ -2,13 +2,11 @@ extends CharacterBody2D
 
 var speed = 450
 var sprite: AnimatedSprite2D
-var idle_collide: CollisionShape2D
-var move_collide: CollisionShape2D
+var collision: CollisionShape2D
 
 func _ready():
-	sprite = $AnimatedSprite2D
-	idle_collide = $IdleCollision
-	move_collide = $MoveCollision
+	sprite = $AnimatedSprite
+	collision = $Collision
 
 func _process(_delta: float) -> void:
 	move()
@@ -36,10 +34,8 @@ func move():
 
 func player_is_moving(moving: bool):
 	if moving:
-		idle_collide.disabled = true
-		move_collide.disabled = false
+		collision.shape.size = Vector2(95, 73)
 		sprite.animation = "move"
 	if !moving:
-		idle_collide.disabled = false
-		move_collide.disabled = true
+		collision.shape.size = Vector2(95, 64)
 		sprite.animation = "idle"

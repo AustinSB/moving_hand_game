@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://o268dgapyma8"]
+[gd_scene load_steps=7 format=3 uid="uid://o268dgapyma8"]
 
 [ext_resource type="Script" uid="uid://cbcs4d4lffyhr" path="res://Player Hand/player.gd" id="1_ckjtj"]
 [ext_resource type="Texture2D" uid="uid://3uyvrj0jr2yq" path="res://Player Hand/hand_move.png" id="2_ckjtj"]
@@ -9,9 +9,6 @@ size = Vector2(100, 75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3rib"]
 size = Vector2(95, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmy6h"]
-size = Vector2(95, 73)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2fwgt"]
 animations = [{
@@ -41,15 +38,10 @@ script = ExtResource("1_ckjtj")
 shape = SubResource("RectangleShape2D_vg17i")
 debug_color = Color(0.14733, 0.666273, 0.342995, 0.42)
 
-[node name="IdleCollision" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_v3rib")
 
-[node name="MoveCollision" type="CollisionShape2D" parent="."]
-visible = false
-shape = SubResource("RectangleShape2D_gmy6h")
-disabled = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2fwgt")
 animation = &"idle"
