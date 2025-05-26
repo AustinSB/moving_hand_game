@@ -1,24 +1,17 @@
 extends CharacterBody2D
 
 var speed = 450
-
-var default_sprite: Texture
-var wall_sprite: Texture
-var sprite: Sprite2D
+var sprite: AnimatedSprite2D
+var idle_collide: CollisionShape2D
+var move_collide: CollisionShape2D
 
 func _ready():
-	sprite = $Sprite2D
-	default_sprite = sprite.texture
-	wall_sprite = preload("res://Player Hand/hand_side_icon.png")
+	sprite = $AnimatedSprite2D
+	idle_collide = $IdleCollision
+	move_collide = $MoveCollision
 
 func _process(_delta: float) -> void:
-	if is_on_wall():
-		sprite.texture = wall_sprite
-	else:
-		sprite.texture = default_sprite
-	
 	move()
-
 
 func move():
 	velocity = Vector2.ZERO
@@ -33,7 +26,20 @@ func move():
 		velocity.y += 1
 		
 	if velocity.length() > 0:
+		player_is_moving(true)
 		velocity = velocity.normalized() * speed
 		rotation = velocity.angle()
+	else:
+		player_is_moving(false)
 	
 	move_and_slide()
+
+func player_is_moving(moving: bool):
+	if moving:
+		idle_collide.disabled = true
+		move_collide.disabled = false
+		sprite.animation = "move"
+	if !moving:
+		idle_collide.disabled = false
+		move_collide.disabled = true
+		sprite.animation = "idle"

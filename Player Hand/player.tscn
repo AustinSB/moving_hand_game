@@ -1,18 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://o268dgapyma8"]
+[gd_scene load_steps=8 format=3 uid="uid://o268dgapyma8"]
 
 [ext_resource type="Script" uid="uid://cbcs4d4lffyhr" path="res://Player Hand/player.gd" id="1_ckjtj"]
-[ext_resource type="Texture2D" uid="uid://3uyvrj0jr2yq" path="res://Player Hand/hand_move_icon.png" id="2_ckjtj"]
+[ext_resource type="Texture2D" uid="uid://3uyvrj0jr2yq" path="res://Player Hand/hand_move.png" id="2_ckjtj"]
+[ext_resource type="Texture2D" uid="uid://c3607t7skmckm" path="res://Player Hand/hand_idle.png" id="2_vg17i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vg17i"]
+size = Vector2(100, 75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3rib"]
-size = Vector2(73, 95)
+size = Vector2(95, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmy6h"]
+size = Vector2(95, 73)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2fwgt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vg17i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ckjtj")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ckjtj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
+[node name="PlayerArea" type="Area2D" parent="."]
+
+[node name="AreaCollision" type="CollisionShape2D" parent="PlayerArea"]
+shape = SubResource("RectangleShape2D_vg17i")
+debug_color = Color(0.14733, 0.666273, 0.342995, 0.42)
+
+[node name="IdleCollision" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_v3rib")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
-texture = ExtResource("2_ckjtj")
+[node name="MoveCollision" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_gmy6h")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2fwgt")
+animation = &"idle"

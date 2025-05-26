@@ -1,4 +1,4 @@
 extends Area2D
 
-func _on_body_entered(_body: Node2D) -> void:
-	print("body entered")
+func _on_area_entered(area: Area2D) -> void:
+	print("area entered")

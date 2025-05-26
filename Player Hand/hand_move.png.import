@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3607t7skmckm"
-path="res://.godot/imported/hand_idle_icon.png-5630673f4f01bcca586f4a8c8843612b.ctex"
+uid="uid://3uyvrj0jr2yq"
+path="res://.godot/imported/hand_move.png-1c1257e3046c798c4f1e12a5cb274bc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player Hand/hand_idle_icon.png"
-dest_files=["res://.godot/imported/hand_idle_icon.png-5630673f4f01bcca586f4a8c8843612b.ctex"]
+source_file="res://Player Hand/hand_move.png"
+dest_files=["res://.godot/imported/hand_move.png-1c1257e3046c798c4f1e12a5cb274bc0.ctex"]
 
 [params]
 
