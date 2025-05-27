@@ -14,15 +14,15 @@ func _process(_delta: float) -> void:
 func move():
 	velocity = Vector2.ZERO
 	
-	if Input.is_key_pressed(KEY_D):
-		velocity.x += 1
-	if Input.is_key_pressed(KEY_A):
-		velocity.x -= 1
-	if Input.is_key_pressed(KEY_W):
+	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
-	if Input.is_key_pressed(KEY_S):
+	if Input.is_action_pressed("move_left"):
+		velocity.x -= 1
+	if Input.is_action_pressed("move_down"):
 		velocity.y += 1
-		
+	if Input.is_action_pressed("move_right"):
+		velocity.x += 1
+
 	if velocity.length() > 0:
 		player_is_moving(true)
 		velocity = velocity.normalized() * speed
