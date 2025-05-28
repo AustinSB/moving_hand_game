@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://i0dvfun7gy7v"]
+[gd_scene load_steps=4 format=3 uid="uid://i0dvfun7gy7v"]
 
 [ext_resource type="Script" uid="uid://8266vvxdgh65" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bv1hbwcm52vt4" path="res://gate_01.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://o268dgapyma8" path="res://Player Hand/player.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://cnh5kc0v4p77v" path="res://wall.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://ci5l6buyjftcg" path="res://circle_button.tscn" id="4_lquwl"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ig7tw")
@@ -11,8 +10,5 @@ script = ExtResource("1_ig7tw")
 [node name="Player" parent="." instance=ExtResource("3_h2yge")]
 position = Vector2(75, 75)
 
-[node name="Wall" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(206, 76)
-
-[node name="CircleButton" parent="." instance=ExtResource("4_lquwl")]
-position = Vector2(77, 202)
+[node name="Gate01" parent="." instance=ExtResource("3_1bvp3")]
+position = Vector2(121, 198)

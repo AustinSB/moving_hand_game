@@ -2,7 +2,8 @@ extends Area2D
 
 var sprite: AnimatedSprite2D
 var is_entered = false
-var button_on = false
+var is_on = false
+signal activated
 
 func _ready():
 	sprite = $AnimatedSprite
@@ -18,8 +19,9 @@ func _on_area_exited(_area: Area2D) -> void:
 	is_entered = false
 
 func toggle_button():
-	button_on = !button_on
-	if button_on:
+	is_on = !is_on
+	if is_on:
 		sprite.animation = "on"
-	if !button_on:
+	if !is_on:
 		sprite.animation = "off"
+	emit_signal("activated")
