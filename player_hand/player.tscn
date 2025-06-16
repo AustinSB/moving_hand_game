@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://o268dgapyma8"]
 
-[ext_resource type="Script" uid="uid://cbcs4d4lffyhr" path="res://Player Hand/player.gd" id="1_ckjtj"]
-[ext_resource type="Texture2D" uid="uid://3uyvrj0jr2yq" path="res://Player Hand/hand_move.png" id="2_ckjtj"]
-[ext_resource type="Texture2D" uid="uid://c3607t7skmckm" path="res://Player Hand/hand_idle.png" id="2_vg17i"]
+[ext_resource type="Script" uid="uid://cbcs4d4lffyhr" path="res://player_hand/player.gd" id="1_ckjtj"]
+[ext_resource type="Texture2D" uid="uid://3uyvrj0jr2yq" path="res://player_hand/hand_move.png" id="2_ckjtj"]
+[ext_resource type="Texture2D" uid="uid://c3607t7skmckm" path="res://player_hand/hand_idle.png" id="2_vg17i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vg17i"]
 size = Vector2(100, 75)

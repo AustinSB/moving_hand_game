@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gubcvbj53fec"
-path="res://.godot/imported/power_button_off.png-afa7bb25dd7a02176ca9651951e51b77.ctex"
+uid="uid://bcjfg4uvq7v8r"
+path="res://.godot/imported/wall.png-fa78252665a48611d4a46404a2df6d50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://power_button_off.png"
-dest_files=["res://.godot/imported/power_button_off.png-afa7bb25dd7a02176ca9651951e51b77.ctex"]
+source_file="res://walls/wall.png"
+dest_files=["res://.godot/imported/wall.png-fa78252665a48611d4a46404a2df6d50.ctex"]
 
 [params]
 

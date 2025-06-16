@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ci5l6buyjftcg"]
 
-[ext_resource type="Script" uid="uid://bl5h4f1upia7y" path="res://circle_button.gd" id="1_w5jgi"]
-[ext_resource type="Texture2D" uid="uid://gubcvbj53fec" path="res://power_button_off.png" id="2_5j1o6"]
-[ext_resource type="Texture2D" uid="uid://dgunruperpn33" path="res://power_button_on.png" id="3_7aesk"]
+[ext_resource type="Script" uid="uid://bl5h4f1upia7y" path="res://circle_button/circle_button.gd" id="1_hhkdm"]
+[ext_resource type="Texture2D" uid="uid://gubcvbj53fec" path="res://circle_button/power_button_off.png" id="2_4xh75"]
+[ext_resource type="Texture2D" uid="uid://dgunruperpn33" path="res://circle_button/power_button_on.png" id="3_b2pqa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oq5cr"]
 radius = 45.0
@@ -11,7 +11,7 @@ radius = 45.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_5j1o6")
+"texture": ExtResource("2_4xh75")
 }],
 "loop": true,
 "name": &"off",
@@ -19,7 +19,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_7aesk")
+"texture": ExtResource("3_b2pqa")
 }],
 "loop": true,
 "name": &"on",
@@ -28,7 +28,7 @@ animations = [{
 
 [node name="CircleButton" type="Area2D"]
 z_index = -1
-script = ExtResource("1_w5jgi")
+script = ExtResource("1_hhkdm")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_oq5cr")
