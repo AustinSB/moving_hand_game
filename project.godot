@@ -13,7 +13,7 @@ config_version=5
 config/name="Moving Hand Game"
 run/main_scene="uid://i0dvfun7gy7v"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://resources/icon.svg"
 
 [input]
 
