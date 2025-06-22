@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfhf6udrko2iy"]
+
+[ext_resource type="Texture2D" uid="uid://bt7o8lqmx84l4" path="res://resources/icon.svg" id="1_bq63w"]
+[ext_resource type="Script" uid="uid://c7888wif35jjg" path="res://cat_spawn.gd" id="1_rpo0x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rpo0x"]
+size = Vector2(60, 60)
+
+[node name="Cat Spawn" type="Area2D"]
+script = ExtResource("1_rpo0x")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_bq63w")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rpo0x")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
