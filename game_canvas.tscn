@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtpv8p8inqlx5"]
+
+[ext_resource type="Script" uid="uid://bpl3sft0eudej" path="res://game_canvas.gd" id="1_u8qh4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdufq"]
+
+[node name="Game Canvas" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_u8qh4")
+
+[node name="Canvas Area" type="Area2D" parent="."]
+
+[node name="Canvas Collision" type="CollisionShape2D" parent="Canvas Area"]
+shape = SubResource("RectangleShape2D_hdufq")
+
+[connection signal="input_event" from="Canvas Area" to="." method="_on_canvas_area_input_event"]

@@ -1,10 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://i0dvfun7gy7v"]
 
 [ext_resource type="Script" uid="uid://8266vvxdgh65" path="res://main.gd" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://cfhf6udrko2iy" path="res://cat_spawn.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dtpv8p8inqlx5" path="res://game_canvas.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ig7tw")
 
-[node name="Cat Spawn" parent="." instance=ExtResource("3_h2yge")]
-position = Vector2(72, 58)
+[node name="Game Canvas" parent="." instance=ExtResource("2_0xm2m")]
