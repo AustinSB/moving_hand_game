@@ -14,7 +14,7 @@ func _ready() -> void:
 	canvas_collision.shape.extents = Vector2(1920, 1080)
 	canvas_area.position = viewport_size / 2
 
-func _on_canvas_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_canvas_area_input_event(_viewport: Node, _event: InputEvent, _shape_idx: int) -> void:
 	if Input.is_action_just_released("interact"):
 		var cs = cat_spawn.duplicate()
 		cs.position = get_viewport().get_mouse_position()
