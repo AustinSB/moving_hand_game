@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cnqil7e1ao7wo"]
+
+[ext_resource type="Script" uid="uid://7cq6iyman0nw" path="res://barrier.gd" id="1_lfb78"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfb78"]
+size = Vector2(20, 1200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdbah"]
+size = Vector2(2400, 20)
+
+[node name="Barrier" type="StaticBody2D" unique_id=418511022]
+script = ExtResource("1_lfb78")
+
+[node name="left_wall" type="CollisionShape2D" parent="." unique_id=826334065]
+position = Vector2(0, 537)
+shape = SubResource("RectangleShape2D_lfb78")
+
+[node name="right_wall" type="CollisionShape2D" parent="." unique_id=407722217]
+position = Vector2(1919, 537)
+shape = SubResource("RectangleShape2D_lfb78")
+
+[node name="top_wall" type="CollisionShape2D" parent="." unique_id=316355253]
+position = Vector2(942, 0)
+shape = SubResource("RectangleShape2D_vdbah")
+
+[node name="bottom_wall" type="CollisionShape2D" parent="." unique_id=555099898]
+position = Vector2(942, 1082)
+shape = SubResource("RectangleShape2D_vdbah")

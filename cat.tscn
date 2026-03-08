@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://1kvxgntqvcr8"]
+[gd_scene format=3 uid="uid://1kvxgntqvcr8"]
 
 [ext_resource type="Script" uid="uid://tu8ucnnqya8s" path="res://cat.gd" id="1_52fj1"]
 [ext_resource type="Texture2D" uid="uid://br8q67m4n68mr" path="res://resources/space_cat_1.png" id="1_hcucf"]
@@ -17,17 +17,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6fl1u"]
 size = Vector2(150, 108)
 
-[node name="Cat" type="Area2D"]
+[node name="Cat" type="CharacterBody2D" unique_id=1222150178]
 script = ExtResource("1_52fj1")
 
-[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=2132838723]
 sprite_frames = SubResource("SpriteFrames_52fj1")
 
-[node name="Collision" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1050909814]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_6fl1u")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=242590552]
 autostart = true
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
