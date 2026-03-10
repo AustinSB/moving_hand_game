@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cutui46j0j382"]
+
+[ext_resource type="Script" uid="uid://7ldc8ok8v40i" path="res://game_stats.gd" id="1_0crb0"]
+
+[node name="Game Stats" type="Control" unique_id=1262254056]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0crb0")
+
+[node name="Points" type="Label" parent="." unique_id=1287304066]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 17.0
+offset_right = 69.0
+offset_bottom = 40.0
