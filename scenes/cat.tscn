@@ -18,6 +18,7 @@ animations = [{
 size = Vector2(150, 108)
 
 [node name="Cat" type="CharacterBody2D" unique_id=1222150178]
+input_pickable = true
 script = ExtResource("1_52fj1")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=2132838723]

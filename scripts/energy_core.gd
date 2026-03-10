@@ -17,6 +17,6 @@ func _is_material_gone():
 	if(material_count > 0):
 		material_count -= 1
 		PlayerVariables.total_points += 1
-	else:
+	if(material_count <= 0):
 		sprite.animation = "empty"
 		collision.disabled = true

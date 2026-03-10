@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpo0x"]
 size = Vector2(60, 60)
 
-[node name="Cat Spawn" type="CharacterBody2D" unique_id=1711429333]
+[node name="Cat Spawn" type="Area2D" unique_id=1445757455]
 script = ExtResource("1_rpo0x")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=354342699]
