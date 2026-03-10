@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://1kvxgntqvcr8"]
 
-[ext_resource type="Script" uid="uid://tu8ucnnqya8s" path="res://cat.gd" id="1_52fj1"]
+[ext_resource type="Script" uid="uid://tu8ucnnqya8s" path="res://scripts/cat.gd" id="1_52fj1"]
 [ext_resource type="Texture2D" uid="uid://br8q67m4n68mr" path="res://resources/space_cat_1.png" id="1_hcucf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_52fj1"]

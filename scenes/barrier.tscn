@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cnqil7e1ao7wo"]
 
-[ext_resource type="Script" uid="uid://7cq6iyman0nw" path="res://barrier.gd" id="1_lfb78"]
+[ext_resource type="Script" uid="uid://7cq6iyman0nw" path="res://scripts/barrier.gd" id="1_lfb78"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfb78"]
 size = Vector2(20, 1200)

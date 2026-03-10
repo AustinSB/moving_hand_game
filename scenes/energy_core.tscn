@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://drr1fnsdfs4em"]
+
+[ext_resource type="Script" uid="uid://wrokdjta1hfn" path="res://scripts/energy_core.gd" id="1_yntf2"]
+[ext_resource type="Texture2D" uid="uid://dgw5f2ya1dsyq" path="res://resources/energy_core_empty.png" id="2_3osnw"]
+[ext_resource type="Texture2D" uid="uid://dkxiy1u1clvxx" path="res://resources/energy_core_full.png" id="3_7jegp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3u6d"]
+size = Vector2(200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vg4go"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3osnw")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7jegp")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[node name="Energy Core" type="StaticBody2D" unique_id=23669358]
+input_pickable = true
+script = ExtResource("1_yntf2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1668759914]
+shape = SubResource("RectangleShape2D_o3u6d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1314372420]
+sprite_frames = SubResource("SpriteFrames_vg4go")
+animation = &"full"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

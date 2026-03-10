@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://i0dvfun7gy7v"]
+
+[ext_resource type="Script" uid="uid://8266vvxdgh65" path="res://scripts/main.gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://drr1fnsdfs4em" path="res://scenes/energy_core.tscn" id="2_tefeu"]
+[ext_resource type="PackedScene" uid="uid://cnqil7e1ao7wo" path="res://scenes/barrier.tscn" id="3_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://1kvxgntqvcr8" path="res://scenes/cat.tscn" id="4_tipki"]
+[ext_resource type="PackedScene" uid="uid://cutui46j0j382" path="res://scenes/game_stats.tscn" id="5_85g3d"]
+
+[node name="Main" type="Node" unique_id=941860409]
+script = ExtResource("1_tbgi4")
+
+[node name="Energy Core" parent="." unique_id=23669358 instance=ExtResource("2_tefeu")]
+position = Vector2(880, 311)
+
+[node name="Barrier" parent="." unique_id=872927694 instance=ExtResource("3_o6xl0")]
+position = Vector2(-2, 2)
+
+[node name="Cat" parent="." unique_id=1222150178 instance=ExtResource("4_tipki")]
+position = Vector2(148, 120)
+
+[node name="Game Stats" parent="." unique_id=1262254056 instance=ExtResource("5_85g3d")]
